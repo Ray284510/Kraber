@@ -1,0 +1,99 @@
+{
+  "source_sha256": "02af37b64e744f6a24c64d613124cf7f9348a865a007a291be6dbdff88a1c79a",
+  "source_selection": "criteria, dimensions, completed_at",
+  "completed_at": "2026-11-07T11:46:42.174319+08:00",
+  "criteria": [
+    {
+      "number": 1,
+      "criterion": "自然语言需求接收",
+      "status": "PASS",
+      "evidence": "natural-language-plan.json：本聊天自然语言需求及来源"
+    },
+    {
+      "number": 2,
+      "criterion": "自主规划建模流程",
+      "status": "PASS",
+      "evidence": "建模前保存的尺寸、结构、装配及检查计划"
+    },
+    {
+      "number": 3,
+      "criterion": "通过 MCP/NX Open 实际操作 NX 12",
+      "status": "PASS",
+      "evidence": "mcp-handshake.json；actual-mcp-calls.jsonl；原生 NX 12.0.2.9 会话"
+    },
+    {
+      "number": 4,
+      "criterion": "UG 图形界面展示完整过程",
+      "status": "PASS",
+      "evidence": "NX_actual_modeling.mp4；video_frames.jsonl；未剪辑的实屏录制"
+    },
+    {
+      "number": 5,
+      "criterion": "多零件及基本装配",
+      "status": "PASS",
+      "evidence": "4 个独立零件、1 个包含 4 组件的原生 NX 装配"
+    },
+    {
+      "number": 6,
+      "criterion": "几何、特征和装配干涉检查",
+      "status": "PASS",
+      "evidence": "4 实体一致性/特征错误均为 0；全部 6 对干涉检查通过"
+    },
+    {
+      "number": 7,
+      "criterion": "发现错误、修改并重新执行",
+      "status": "PASS",
+      "evidence": "NX 检出 2 对穿透；Codex 诊断后上移摆臂 1 mm；1 轮修复后 0 对穿透"
+    },
+    {
+      "number": 8,
+      "criterion": "PRT、STEP 保存和重开验证",
+      "status": "PASS",
+      "evidence": "5 个原生 PRT 重开；5 个 STEP 实际导入 NX；导入后保存的 PRT 再次重开"
+    },
+    {
+      "number": 9,
+      "criterion": "真实截图、日志、模型和验收记录",
+      "status": "PASS",
+      "evidence": "对应文件、哈希、录屏、原始返回数据及本报告"
+    }
+  ],
+  "dimensions": [
+    {
+      "part": "joint_base",
+      "nx_volume_mm3": 52200.54865578229,
+      "analytic_reference_volume_mm3": 52200.25404323272,
+      "relative_volume_error": 5.643891106765474e-06,
+      "bbox_max_error_mm": 7.105427357601002e-15,
+      "faces": 17,
+      "edges": 36
+    },
+    {
+      "part": "joint_arm",
+      "nx_volume_mm3": 18450.171881619368,
+      "analytic_reference_volume_mm3": 18450.08324680166,
+      "relative_volume_error": 4.804033484433756e-06,
+      "bbox_max_error_mm": 1.7763568394002505e-15,
+      "faces": 13,
+      "edges": 30
+    },
+    {
+      "part": "joint_pin",
+      "nx_volume_mm3": 4529.47650465976,
+      "analytic_reference_volume_mm3": 4529.548287945763,
+      "relative_volume_error": 1.5847780272878098e-05,
+      "bbox_max_error_mm": 1.7763568394002505e-15,
+      "faces": 5,
+      "edges": 4
+    },
+    {
+      "part": "joint_shim",
+      "nx_volume_mm3": 123.04473732234386,
+      "analytic_reference_volume_mm3": 123.04990105580501,
+      "relative_volume_error": 4.196454785285681e-05,
+      "bbox_max_error_mm": 1.7763568394002505e-15,
+      "faces": 4,
+      "edges": 4
+    }
+  ]
+}

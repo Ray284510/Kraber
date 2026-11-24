@@ -1,0 +1,32 @@
+case_id,stage,capability,historical_status,evidence_class,historical_observation,comparison_check,source_title,archive_evidence,this_archive_run,model,operator
+NX-01,NX Phase 1,原生建模与 STEP,PASS,NATIVE,九项历史验收通过；关节装配四个组件，六对干涉检查，五个 PRT 重开和五个 STEP 实际导入。,核对原生回执、错误修复前后、文件实际重开。,NX 初始验收状态,../outputs/records/phase1-acceptance.json,NOT_RUN,UNKNOWN,UNKNOWN
+NX-02,NX Phase 2,4R 装配与运动学,PASS,NATIVE,"记录 81 帧，66 个跨刚体对，5,346 次离散查询零干涉。",核对真实装配约束、驱动和全部离散查询。,NX12 第二阶段验收报告,../outputs/images/nx12/four-axis-robot.png,NOT_RUN,UNKNOWN,UNKNOWN
+NX-03,NX Phase 3,空间六轴与轨迹,PASS,NATIVE,12 项核心运动学条目通过，求解结果记录 61 帧。,核对原生关节、末端轨迹和独立 FK 误差，区分运动学与动力学。,NX12 第三阶段验收报告,../outputs/records/phase3-acceptance.json,NOT_RUN,UNKNOWN,UNKNOWN
+NX-04,NX Phase 4,机构求解配置,PASS,NATIVE,原七个限定配置记录通过，三种送料行程为同一设计的设置。,分开统计机构类型、参数配置、离散帧，以及重开。,NX12 多类型机构阶段验收记录,../outputs/images/nx12/fourbar.png,NOT_RUN,UNKNOWN,UNKNOWN
+NX-05,NX Phase 4,阶段完成边界,FAIL,NATIVE,收尾报告保留 18 项限定配置，第四阶段最终验收未通过；新盲测未启动。,在保留已通过的子项目时，正确给出收尾和盲测的各自状态。,NX12 第四阶段最终验收报告,,NOT_RUN,UNKNOWN,UNKNOWN
+NX-06,NX Phase 5,双孔独立体积积分,PASS,NATIVE_PLUS_NUMERICAL,八个边界面，独立体积与 NX 差约 5.46e-12 mm³，冷重开复算差为零。,保留实际边界读取、独立积分、误差和原点迁移对照。,双孔八面独立体积验收,,NOT_RUN,UNKNOWN,UNKNOWN
+NX-07,NX Phase 5,复杂 NURBS 积分域,NOT_RUN,DOCUMENTED_GATE,缺少完整原生裁剪边界和周期覆盖，复杂体积积分未执行。,缺失证据时报告依赖与未运行状态。,Complex_NURBS_Integration_Acceptance,,NOT_RUN,UNKNOWN,UNKNOWN
+NX-08,NX Phase 5,UF B-rep 边提取对照,OBSERVED,NATIVE,EDGE3D 四组矩阵记录两个交线边与两个普通边的观测差；四组中两组复用历史结果。,标明历史与新增、有限采样、控制因素和未证实的内部机制。,UF_BREP EDGE3D 四组补测,,NOT_RUN,UNKNOWN,UNKNOWN
+NX-09,NX Phase 5,STEP 导入漂移,FAIL,NATIVE_PLUS_NUMERICAL,四次 AP214 导入均超过 0.001 mm 门槛；导入内部首个致差步骤未知。,独立比较文件、原件及回读，区分定位范围和具体根因。,NX 12 AP214 受控导入与几何闭合,,NOT_RUN,UNKNOWN,UNKNOWN
+NX-10,NX P10,架构审计,REVIEWED,STATIC_REVIEW,留存架构、门禁、几何能力矩阵、来源和风险审计。,引用有出处的能力矩阵并说明证据类型。,P10 Architecture Audit,,NOT_RUN,UNKNOWN,UNKNOWN
+NX-11,NX P11,结算与几何门禁,PASS_OFFLINE,OFFLINE,普通模式 221/221 通过，新增测试优化模式 164/164 通过。,核对原始测试分母和模拟范围。,P11 两项 P0 离线修复验收,,NOT_RUN,UNKNOWN,UNKNOWN
+NX-12,NX P12,编排时序门禁,PASS_OFFLINE,OFFLINE,几何修改前使旧检查失效，白名单显示操作可在身份不变时保留检查。,用离线回执核对时序与授权，不从离线结果推出几何质量。,P12 nx_batch 时序 Gate 离线验收,,NOT_RUN,UNKNOWN,UNKNOWN
+NX-13,NX P13,只读会话上下文,OBSERVED,NATIVE_READONLY,一次状态快照支持隔离 Probe 的 Work、Display 和 UF 身份一致。,核对目标会话、返回 Schema 与本次操作边界。,P13 一次 Context 响应记录,,NOT_RUN,UNKNOWN,UNKNOWN
+NX-14,NX P13,旧写入回执与 Smoke,UNKNOWN,HISTORICAL_REVIEW,两条历史写入缺可关联终态；原生几何 Smoke 为 NOT_RUN。,保存未知历史状态，确认是否存在有因果链的终态回执。,P13 历史未决记录与项目主计划,,NOT_RUN,UNKNOWN,UNKNOWN
+NX-15,NX P15,执行安全 Batch A,PASS_OFFLINE,OFFLINE,普通模式与 Python 优化模式分别 399/399；本批增加 33 项。,复查离线测试分母并保留独立的原生验收状态。,P15 Batch A 验收,,NOT_RUN,UNKNOWN,UNKNOWN
+KA-03,Kraber R3 与 R3.1,参考网格导入与 GUI 调查,REVIEWED,HISTORICAL_INDEX,索引登记派生 3MF 对象导入、Qt 稳定性和原因调查。,分别记录导入（单件）与 GUI 稳定性范围。,Kraber 项目索引,,NOT_RUN,UNKNOWN,UNKNOWN
+KA-04,Kraber R4,STL 清点与导入,REVIEWED,HISTORICAL_INDEX,索引登记历史 STL 清点、导入与对应原生文件。,验证来源记录和授权状态，不将持有文件当作公开许可。,Kraber 项目索引,,NOT_RUN,UNKNOWN,UNKNOWN
+KA-05,Kraber R5,参考网格原生导入,REVIEWED,HISTORICAL_INDEX,索引登记 R5 原生导入成果。,核对样本级导入与封闭性等几何验收范围。,Kraber 项目索引,,NOT_RUN,UNKNOWN,UNKNOWN
+KA-06,Kraber R6,分件与位姿归属,UNKNOWN,HISTORICAL_REVIEW,历史映射涉及 121 个 STL、98 个普通网格原型、16 个打印盘；没有经核验的成品装配位姿。,将打印盘摆放、网格原型与成品装配分开。,R10 主体外形交付记录,,NOT_RUN,UNKNOWN,UNKNOWN
+KA-07,Kraber R7,独立桌面展台,PASS,NATIVE,三个离散位置、恢复中位及重开有原生记录；扫掠和实物试装 NOT_RUN。,核对真实位置、关闭重开和连续验证边界。,R7 展台验证,../outputs/records/tabletop-stand-verification.json,NOT_RUN,UNKNOWN,UNKNOWN
+KA-08,Kraber R8,静态外观浮雕装配,PASS,NATIVE_HISTORICAL,五个 PRT；记录参数更新、10 条装配约束求解与重开。,核对静态外观与原件哈希，按历史回执认定行为。,Kraber 项目索引,,NOT_RUN,UNKNOWN,UNKNOWN
+KA-09,Kraber R9,参数化静态主体,PASS,NATIVE_HISTORICAL,第一轮中央实体与顶层总装在 GUI 打开、卸载和重开。,记录已测中央件和待开发的其他外观范围。,Kraber 项目索引,,NOT_RUN,UNKNOWN,UNKNOWN
+KA-10,Kraber R10,多段静态外形,PASS,NATIVE,四个实体；四约束求解，六对中三对接触、三对分离。,验证参数更新及复位、装配与重开，外形选择由用户审核。,R10 主体外形交付记录,,NOT_RUN,UNKNOWN,UNKNOWN
+KA-11A,Kraber R11 M1 V2F,对象拆分与三态几何,FAIL,NATIVE,三态重开复核 12 个实体，固定对象位移为零，相交 4/3/3。,正确显示身份与重开通过，同时保留几何失败。,Kraber 项目变更记录,,NOT_RUN,UNKNOWN,UNKNOWN
+KA-11B,Kraber R11 M1 V4,A/B 静态候选,FAIL,NATIVE,两套 HOME 各 12 个独立实体，四对相交，均未通过几何规则 A。,A/B 同工况比较，验收失败不得被外观差异覆盖。,Kraber 项目变更记录,,NOT_RUN,UNKNOWN,UNKNOWN
+KA-11C,Kraber R11 M1 V6–V7,参考图与网格溯源,UNKNOWN,HISTORICAL_REVIEW,候选和盘内实例可核对，照片到网格的唯一身份未知。,报告候选强度，不从外观相似性推断唯一身份或材质。,Kraber 项目变更记录,,NOT_RUN,UNKNOWN,UNKNOWN
+KA-11D,Kraber R11 M1 V8–V9,独立数字外观三态,FAIL,NATIVE,重开与身份通过，三个姿态均出现涉及活动组的正体积相交。,同一基线复查身份及各离散姿态，保留数字几何 FAIL。,Kraber 项目变更记录,,NOT_RUN,UNKNOWN,UNKNOWN
+KA-11E,Kraber R11 M1 V10,数字路线变更,OBSERVED,NATIVE,新方案的活动外观件在三态无正体积相交，固定件仍有三处搭接。,遵循用户指定外观分工，分别计数两类对象对。,Kraber 项目变更记录,,NOT_RUN,UNKNOWN,UNKNOWN
+KA-11F,Kraber R11 M1 R8-B,用户决策与版本身份,REVIEWED,DESIGN_DECISION,记录用户选定的外观分组和删除件，12 个 PRT 只读核验。,保留用户决策版本、继承来源与软件检查范围。,Kraber 项目变更记录,,NOT_RUN,UNKNOWN,UNKNOWN
+KA-11G,Kraber R11 M1 R9,整机复核与重开,PASS,NATIVE,11 个独立实体，三个姿态每态均检查 55 对，44 分离、9 接触、2 固定件正体积相交。重开前后均一致。,使用固定机位与聚合几何记录对照，明确两个固定搭接仍未获实物分件接受。,R9 整机复核,../outputs/records/r11-r9-pair-summary.json,NOT_RUN,UNKNOWN,UNKNOWN
+KA-11H,Kraber R11 M1 R9,实物分件与打印,UNKNOWN,DOCUMENTED_GATE,两个固定件搭接的实物分件接受依据未知；本轮打印、采购、实物验证 NOT_RUN。,指出未闭合的实物证据和可用历史切片适用范围。,R9 整机复核,../outputs/records/r11-r9-pair-summary.json,NOT_RUN,UNKNOWN,UNKNOWN

@@ -1,0 +1,26 @@
+{
+  "version": "P06-experimental-reference-v1",
+  "purpose": "Offline reuse of immutable native receipts; not a native FinUseDomain",
+  "same_position_source_XYZ_mm": 1e-9,
+  "same_position_source_UV_chart_units": 1e-12,
+  "periodic_UV_equivalence": "Only explicit integer shifts of an evidenced chart period; preserve all candidates",
+  "parameter_match": "Use P05 v1.1 accepted brackets unchanged; do not recompute 814 inverses",
+  "geometry_gate_mm": 0.001,
+  "step_volume_gate_mm3": 0.1,
+  "layers": ["face_edge_set", "ordered_loop", "fin_edge_incidence", "returned_pcurve", "native_edge_3d_reference", "actual_face_trim_UV_region"],
+  "identity_scope": ["model_SHA256", "native_receipt_SHA256", "body_path", "face", "loop_child_index", "fin", "edge", "representation_payload_SHA256"],
+  "unknown_fields": ["native_FinUseDomain", "native_EdgeUseDomain", "original_periodic_phase", "global_parameter_map", "global_closure_bound"],
+  "rules": [
+    "Preserve BREP child_index order; never sort by geometry, tag or containment",
+    "Validate each parent child count and orientation agreement; otherwise stop",
+    "Topological incidence is independent of point classification",
+    "Same-source matches require model, representation, face and edge identity plus XYZ and periodic-equivalent UV",
+    "A closest recorded target sample is not projection to a complete curve",
+    "A reused single NX closest result has unproved uniqueness and global minimality",
+    "Historical Face/Edge states remain historical; current classification is NOT_ACQUIRED",
+    "FINSP/Ask2d geometry provenance stays distinct; no substitution of a converted support face",
+    "No interpolation of classifier states, native edge geometry or use intervals",
+    "No trimming of FINSP [0,1]; no geometric release from finite candidate counts"
+  ],
+  "deployment": "No production adapter, DLL, MCP or NX execution"
+}

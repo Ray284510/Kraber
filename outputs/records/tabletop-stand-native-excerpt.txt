@@ -1,0 +1,33 @@
+Source SHA-256 841e7f5ae0bad8cf8bfcf3742abf7b5a6b5873781234caa61b991e7bea12f2c1
+Selected unmodified log lines.
+
+initial=work=null, display=null, loaded=0
+constraint.BASE_DATUM=Solved
+constraint.BEZEL_SEATING=Solved
+constraint.BEZEL_X_DATUM=Solved
+constraint.BEZEL_Y_DATUM=Solved
+constraint.SHOE_ON_FLOOR=Solved
+constraint.SHOE_SIDE_GUIDE=Solved
+dof.cover=Success,T=0,R=0,instantT=0,instantR=0
+dof.free_slide=Success,T=1,R=0,instantT=0,instantR=0
+constraint.INDICATOR_POSITION_X=Solved
+dof.positioned=Success,T=0,R=0,instantT=0,instantR=0
+position.middle=39,13.4,6
+interference.middle=base_cover=3,base_slide=3,cover_slide=2
+position.start=11.999999999999996,13.4,6
+interference.start=base_cover=3,base_slide=3,cover_slide=2
+position.end=66,13.4,6
+interference.end=base_cover=3,base_slide=3,cover_slide=2
+position.restored_middle=39,13.4,6
+interference.restored_middle=base_cover=3,base_slide=3,cover_slide=2
+closed=all four project parts unloaded
+reopen.constraint=BEZEL_SEATING | Solved
+reopen.constraint=BEZEL_X_DATUM | Solved
+reopen.constraint=BEZEL_Y_DATUM | Solved
+reopen.constraint=SHOE_ON_FLOOR | Solved
+reopen.constraint=SHOE_SIDE_GUIDE | Solved
+reopen.constraint=INDICATOR_POSITION_X | Solved
+reopen.constraint=BASE_DATUM | Solved
+position.reopened=39,13.4,6
+interference.reopened=base_cover=3,base_slide=3,cover_slide=2
+outcome=PASS

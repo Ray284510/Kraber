@@ -1,0 +1,1197 @@
+{
+  "origin": "EXTRACTED_REAL_NX12_NATIVE_RECORDS_NOT_SYNTHETIC",
+  "source_relative_path": "logs/phase5/geometry-core-p04-20261113/native-runtime.jsonl",
+  "source_SHA256": "1807c60480505e821cb29a659b4f6548de326d3357844f459c649e2afe73469e",
+  "model_SHA256": "85e82314c0d86f75cae625b153029f599b71383d87d00aad73c54152c35b3f05",
+  "NX_version": "12.0.2.9",
+  "source_PID": 65580,
+  "selection": "8 leaf Fin/Edge Use paths plus 22 native parent entries needed to validate recorded child counts; no geometry data added",
+  "records_canonical_SHA256": "d89df65ff5a2532a5684d2efcd2fd8e193e8ea6a42472b1de4fc2771a0a25ac4",
+  "records": [
+    {
+      "kind": "topology_use",
+      "path": [
+        {
+          "id": 114,
+          "type": 1,
+          "tag": 26502,
+          "child_index": -1,
+          "orientation": 0
+        }
+      ],
+      "face": 0,
+      "face_type": -1,
+      "children": 1
+    },
+    {
+      "kind": "topology_use",
+      "path": [
+        {
+          "id": 114,
+          "type": 1,
+          "tag": 26502,
+          "child_index": -1,
+          "orientation": 0
+        },
+        {
+          "id": 126,
+          "type": 4,
+          "tag": 0,
+          "child_index": 0,
+          "orientation": 0
+        }
+      ],
+      "face": 0,
+      "face_type": -1,
+      "children": 4
+    },
+    {
+      "kind": "topology_use",
+      "path": [
+        {
+          "id": 114,
+          "type": 1,
+          "tag": 26502,
+          "child_index": -1,
+          "orientation": 0
+        },
+        {
+          "id": 126,
+          "type": 4,
+          "tag": 0,
+          "child_index": 0,
+          "orientation": 0
+        },
+        {
+          "id": 140,
+          "type": 5,
+          "tag": 26693,
+          "child_index": 0,
+          "orientation": 0
+        }
+      ],
+      "face": 26693,
+      "face_type": 22,
+      "children": 2
+    },
+    {
+      "kind": "topology_use",
+      "path": [
+        {
+          "id": 114,
+          "type": 1,
+          "tag": 26502,
+          "child_index": -1,
+          "orientation": 0
+        },
+        {
+          "id": 126,
+          "type": 4,
+          "tag": 0,
+          "child_index": 0,
+          "orientation": 0
+        },
+        {
+          "id": 140,
+          "type": 5,
+          "tag": 26693,
+          "child_index": 0,
+          "orientation": 0
+        },
+        {
+          "id": 143,
+          "type": 6,
+          "tag": 0,
+          "child_index": 0,
+          "orientation": 0
+        }
+      ],
+      "face": 26693,
+      "face_type": 22,
+      "children": 1
+    },
+    {
+      "kind": "topology_use",
+      "path": [
+        {
+          "id": 114,
+          "type": 1,
+          "tag": 26502,
+          "child_index": -1,
+          "orientation": 0
+        },
+        {
+          "id": 126,
+          "type": 4,
+          "tag": 0,
+          "child_index": 0,
+          "orientation": 0
+        },
+        {
+          "id": 140,
+          "type": 5,
+          "tag": 26693,
+          "child_index": 0,
+          "orientation": 0
+        },
+        {
+          "id": 143,
+          "type": 6,
+          "tag": 0,
+          "child_index": 0,
+          "orientation": 0
+        },
+        {
+          "id": 145,
+          "type": 7,
+          "tag": 0,
+          "child_index": 0,
+          "orientation": -1
+        }
+      ],
+      "face": 26693,
+      "face_type": 22,
+      "children": 1
+    },
+    {
+      "kind": "topology_use",
+      "path": [
+        {
+          "id": 114,
+          "type": 1,
+          "tag": 26502,
+          "child_index": -1,
+          "orientation": 0
+        },
+        {
+          "id": 126,
+          "type": 4,
+          "tag": 0,
+          "child_index": 0,
+          "orientation": 0
+        },
+        {
+          "id": 140,
+          "type": 5,
+          "tag": 26693,
+          "child_index": 0,
+          "orientation": 0
+        },
+        {
+          "id": 143,
+          "type": 6,
+          "tag": 0,
+          "child_index": 0,
+          "orientation": 0
+        },
+        {
+          "id": 145,
+          "type": 7,
+          "tag": 0,
+          "child_index": 0,
+          "orientation": -1
+        },
+        {
+          "id": 133,
+          "type": 8,
+          "tag": 26695,
+          "child_index": 0,
+          "orientation": -1
+        }
+      ],
+      "face": 26693,
+      "face_type": 22,
+      "children": 0
+    },
+    {
+      "kind": "topology_use",
+      "path": [
+        {
+          "id": 114,
+          "type": 1,
+          "tag": 26502,
+          "child_index": -1,
+          "orientation": 0
+        },
+        {
+          "id": 126,
+          "type": 4,
+          "tag": 0,
+          "child_index": 0,
+          "orientation": 0
+        },
+        {
+          "id": 140,
+          "type": 5,
+          "tag": 26693,
+          "child_index": 0,
+          "orientation": 0
+        },
+        {
+          "id": 146,
+          "type": 6,
+          "tag": 0,
+          "child_index": 1,
+          "orientation": 0
+        }
+      ],
+      "face": 26693,
+      "face_type": 22,
+      "children": 1
+    },
+    {
+      "kind": "topology_use",
+      "path": [
+        {
+          "id": 114,
+          "type": 1,
+          "tag": 26502,
+          "child_index": -1,
+          "orientation": 0
+        },
+        {
+          "id": 126,
+          "type": 4,
+          "tag": 0,
+          "child_index": 0,
+          "orientation": 0
+        },
+        {
+          "id": 140,
+          "type": 5,
+          "tag": 26693,
+          "child_index": 0,
+          "orientation": 0
+        },
+        {
+          "id": 146,
+          "type": 6,
+          "tag": 0,
+          "child_index": 1,
+          "orientation": 0
+        },
+        {
+          "id": 147,
+          "type": 7,
+          "tag": 0,
+          "child_index": 0,
+          "orientation": 1
+        }
+      ],
+      "face": 26693,
+      "face_type": 22,
+      "children": 1
+    },
+    {
+      "kind": "topology_use",
+      "path": [
+        {
+          "id": 114,
+          "type": 1,
+          "tag": 26502,
+          "child_index": -1,
+          "orientation": 0
+        },
+        {
+          "id": 126,
+          "type": 4,
+          "tag": 0,
+          "child_index": 0,
+          "orientation": 0
+        },
+        {
+          "id": 140,
+          "type": 5,
+          "tag": 26693,
+          "child_index": 0,
+          "orientation": 0
+        },
+        {
+          "id": 146,
+          "type": 6,
+          "tag": 0,
+          "child_index": 1,
+          "orientation": 0
+        },
+        {
+          "id": 147,
+          "type": 7,
+          "tag": 0,
+          "child_index": 0,
+          "orientation": 1
+        },
+        {
+          "id": 149,
+          "type": 8,
+          "tag": 26696,
+          "child_index": 0,
+          "orientation": 1
+        }
+      ],
+      "face": 26693,
+      "face_type": 22,
+      "children": 0
+    },
+    {
+      "kind": "topology_use",
+      "path": [
+        {
+          "id": 114,
+          "type": 1,
+          "tag": 26502,
+          "child_index": -1,
+          "orientation": 0
+        },
+        {
+          "id": 126,
+          "type": 4,
+          "tag": 0,
+          "child_index": 0,
+          "orientation": 0
+        },
+        {
+          "id": 142,
+          "type": 5,
+          "tag": 26691,
+          "child_index": 1,
+          "orientation": 0
+        }
+      ],
+      "face": 26691,
+      "face_type": 65,
+      "children": 2
+    },
+    {
+      "kind": "topology_use",
+      "path": [
+        {
+          "id": 114,
+          "type": 1,
+          "tag": 26502,
+          "child_index": -1,
+          "orientation": 0
+        },
+        {
+          "id": 126,
+          "type": 4,
+          "tag": 0,
+          "child_index": 0,
+          "orientation": 0
+        },
+        {
+          "id": 142,
+          "type": 5,
+          "tag": 26691,
+          "child_index": 1,
+          "orientation": 0
+        },
+        {
+          "id": 182,
+          "type": 6,
+          "tag": 0,
+          "child_index": 0,
+          "orientation": 0
+        }
+      ],
+      "face": 26691,
+      "face_type": 65,
+      "children": 1
+    },
+    {
+      "kind": "topology_use",
+      "path": [
+        {
+          "id": 114,
+          "type": 1,
+          "tag": 26502,
+          "child_index": -1,
+          "orientation": 0
+        },
+        {
+          "id": 126,
+          "type": 4,
+          "tag": 0,
+          "child_index": 0,
+          "orientation": 0
+        },
+        {
+          "id": 142,
+          "type": 5,
+          "tag": 26691,
+          "child_index": 1,
+          "orientation": 0
+        },
+        {
+          "id": 182,
+          "type": 6,
+          "tag": 0,
+          "child_index": 0,
+          "orientation": 0
+        },
+        {
+          "id": 132,
+          "type": 7,
+          "tag": 0,
+          "child_index": 0,
+          "orientation": 1
+        }
+      ],
+      "face": 26691,
+      "face_type": 65,
+      "children": 1
+    },
+    {
+      "kind": "topology_use",
+      "path": [
+        {
+          "id": 114,
+          "type": 1,
+          "tag": 26502,
+          "child_index": -1,
+          "orientation": 0
+        },
+        {
+          "id": 126,
+          "type": 4,
+          "tag": 0,
+          "child_index": 0,
+          "orientation": 0
+        },
+        {
+          "id": 142,
+          "type": 5,
+          "tag": 26691,
+          "child_index": 1,
+          "orientation": 0
+        },
+        {
+          "id": 182,
+          "type": 6,
+          "tag": 0,
+          "child_index": 0,
+          "orientation": 0
+        },
+        {
+          "id": 132,
+          "type": 7,
+          "tag": 0,
+          "child_index": 0,
+          "orientation": 1
+        },
+        {
+          "id": 130,
+          "type": 8,
+          "tag": 26698,
+          "child_index": 0,
+          "orientation": 1
+        }
+      ],
+      "face": 26691,
+      "face_type": 65,
+      "children": 0
+    },
+    {
+      "kind": "topology_use",
+      "path": [
+        {
+          "id": 114,
+          "type": 1,
+          "tag": 26502,
+          "child_index": -1,
+          "orientation": 0
+        },
+        {
+          "id": 126,
+          "type": 4,
+          "tag": 0,
+          "child_index": 0,
+          "orientation": 0
+        },
+        {
+          "id": 142,
+          "type": 5,
+          "tag": 26691,
+          "child_index": 1,
+          "orientation": 0
+        },
+        {
+          "id": 181,
+          "type": 6,
+          "tag": 0,
+          "child_index": 1,
+          "orientation": 0
+        }
+      ],
+      "face": 26691,
+      "face_type": 65,
+      "children": 1
+    },
+    {
+      "kind": "topology_use",
+      "path": [
+        {
+          "id": 114,
+          "type": 1,
+          "tag": 26502,
+          "child_index": -1,
+          "orientation": 0
+        },
+        {
+          "id": 126,
+          "type": 4,
+          "tag": 0,
+          "child_index": 0,
+          "orientation": 0
+        },
+        {
+          "id": 142,
+          "type": 5,
+          "tag": 26691,
+          "child_index": 1,
+          "orientation": 0
+        },
+        {
+          "id": 181,
+          "type": 6,
+          "tag": 0,
+          "child_index": 1,
+          "orientation": 0
+        },
+        {
+          "id": 180,
+          "type": 7,
+          "tag": 0,
+          "child_index": 0,
+          "orientation": 1
+        }
+      ],
+      "face": 26691,
+      "face_type": 65,
+      "children": 1
+    },
+    {
+      "kind": "topology_use",
+      "path": [
+        {
+          "id": 114,
+          "type": 1,
+          "tag": 26502,
+          "child_index": -1,
+          "orientation": 0
+        },
+        {
+          "id": 126,
+          "type": 4,
+          "tag": 0,
+          "child_index": 0,
+          "orientation": 0
+        },
+        {
+          "id": 142,
+          "type": 5,
+          "tag": 26691,
+          "child_index": 1,
+          "orientation": 0
+        },
+        {
+          "id": 181,
+          "type": 6,
+          "tag": 0,
+          "child_index": 1,
+          "orientation": 0
+        },
+        {
+          "id": 180,
+          "type": 7,
+          "tag": 0,
+          "child_index": 0,
+          "orientation": 1
+        },
+        {
+          "id": 133,
+          "type": 8,
+          "tag": 26695,
+          "child_index": 0,
+          "orientation": 1
+        }
+      ],
+      "face": 26691,
+      "face_type": 65,
+      "children": 0
+    },
+    {
+      "kind": "topology_use",
+      "path": [
+        {
+          "id": 114,
+          "type": 1,
+          "tag": 26502,
+          "child_index": -1,
+          "orientation": 0
+        },
+        {
+          "id": 126,
+          "type": 4,
+          "tag": 0,
+          "child_index": 0,
+          "orientation": 0
+        },
+        {
+          "id": 137,
+          "type": 5,
+          "tag": 26692,
+          "child_index": 2,
+          "orientation": 0
+        }
+      ],
+      "face": 26692,
+      "face_type": 22,
+      "children": 2
+    },
+    {
+      "kind": "topology_use",
+      "path": [
+        {
+          "id": 114,
+          "type": 1,
+          "tag": 26502,
+          "child_index": -1,
+          "orientation": 0
+        },
+        {
+          "id": 126,
+          "type": 4,
+          "tag": 0,
+          "child_index": 0,
+          "orientation": 0
+        },
+        {
+          "id": 137,
+          "type": 5,
+          "tag": 26692,
+          "child_index": 2,
+          "orientation": 0
+        },
+        {
+          "id": 155,
+          "type": 6,
+          "tag": 0,
+          "child_index": 0,
+          "orientation": 0
+        }
+      ],
+      "face": 26692,
+      "face_type": 22,
+      "children": 1
+    },
+    {
+      "kind": "topology_use",
+      "path": [
+        {
+          "id": 114,
+          "type": 1,
+          "tag": 26502,
+          "child_index": -1,
+          "orientation": 0
+        },
+        {
+          "id": 126,
+          "type": 4,
+          "tag": 0,
+          "child_index": 0,
+          "orientation": 0
+        },
+        {
+          "id": 137,
+          "type": 5,
+          "tag": 26692,
+          "child_index": 2,
+          "orientation": 0
+        },
+        {
+          "id": 155,
+          "type": 6,
+          "tag": 0,
+          "child_index": 0,
+          "orientation": 0
+        },
+        {
+          "id": 153,
+          "type": 7,
+          "tag": 0,
+          "child_index": 0,
+          "orientation": 1
+        }
+      ],
+      "face": 26692,
+      "face_type": 22,
+      "children": 1
+    },
+    {
+      "kind": "topology_use",
+      "path": [
+        {
+          "id": 114,
+          "type": 1,
+          "tag": 26502,
+          "child_index": -1,
+          "orientation": 0
+        },
+        {
+          "id": 126,
+          "type": 4,
+          "tag": 0,
+          "child_index": 0,
+          "orientation": 0
+        },
+        {
+          "id": 137,
+          "type": 5,
+          "tag": 26692,
+          "child_index": 2,
+          "orientation": 0
+        },
+        {
+          "id": 155,
+          "type": 6,
+          "tag": 0,
+          "child_index": 0,
+          "orientation": 0
+        },
+        {
+          "id": 153,
+          "type": 7,
+          "tag": 0,
+          "child_index": 0,
+          "orientation": 1
+        },
+        {
+          "id": 151,
+          "type": 8,
+          "tag": 26697,
+          "child_index": 0,
+          "orientation": 1
+        }
+      ],
+      "face": 26692,
+      "face_type": 22,
+      "children": 0
+    },
+    {
+      "kind": "topology_use",
+      "path": [
+        {
+          "id": 114,
+          "type": 1,
+          "tag": 26502,
+          "child_index": -1,
+          "orientation": 0
+        },
+        {
+          "id": 126,
+          "type": 4,
+          "tag": 0,
+          "child_index": 0,
+          "orientation": 0
+        },
+        {
+          "id": 137,
+          "type": 5,
+          "tag": 26692,
+          "child_index": 2,
+          "orientation": 0
+        },
+        {
+          "id": 177,
+          "type": 6,
+          "tag": 0,
+          "child_index": 1,
+          "orientation": 0
+        }
+      ],
+      "face": 26692,
+      "face_type": 22,
+      "children": 1
+    },
+    {
+      "kind": "topology_use",
+      "path": [
+        {
+          "id": 114,
+          "type": 1,
+          "tag": 26502,
+          "child_index": -1,
+          "orientation": 0
+        },
+        {
+          "id": 126,
+          "type": 4,
+          "tag": 0,
+          "child_index": 0,
+          "orientation": 0
+        },
+        {
+          "id": 137,
+          "type": 5,
+          "tag": 26692,
+          "child_index": 2,
+          "orientation": 0
+        },
+        {
+          "id": 177,
+          "type": 6,
+          "tag": 0,
+          "child_index": 1,
+          "orientation": 0
+        },
+        {
+          "id": 178,
+          "type": 7,
+          "tag": 0,
+          "child_index": 0,
+          "orientation": -1
+        }
+      ],
+      "face": 26692,
+      "face_type": 22,
+      "children": 1
+    },
+    {
+      "kind": "topology_use",
+      "path": [
+        {
+          "id": 114,
+          "type": 1,
+          "tag": 26502,
+          "child_index": -1,
+          "orientation": 0
+        },
+        {
+          "id": 126,
+          "type": 4,
+          "tag": 0,
+          "child_index": 0,
+          "orientation": 0
+        },
+        {
+          "id": 137,
+          "type": 5,
+          "tag": 26692,
+          "child_index": 2,
+          "orientation": 0
+        },
+        {
+          "id": 177,
+          "type": 6,
+          "tag": 0,
+          "child_index": 1,
+          "orientation": 0
+        },
+        {
+          "id": 178,
+          "type": 7,
+          "tag": 0,
+          "child_index": 0,
+          "orientation": -1
+        },
+        {
+          "id": 130,
+          "type": 8,
+          "tag": 26698,
+          "child_index": 0,
+          "orientation": -1
+        }
+      ],
+      "face": 26692,
+      "face_type": 22,
+      "children": 0
+    },
+    {
+      "kind": "topology_use",
+      "path": [
+        {
+          "id": 114,
+          "type": 1,
+          "tag": 26502,
+          "child_index": -1,
+          "orientation": 0
+        },
+        {
+          "id": 126,
+          "type": 4,
+          "tag": 0,
+          "child_index": 0,
+          "orientation": 0
+        },
+        {
+          "id": 158,
+          "type": 5,
+          "tag": 26694,
+          "child_index": 3,
+          "orientation": 0
+        }
+      ],
+      "face": 26694,
+      "face_type": 43,
+      "children": 2
+    },
+    {
+      "kind": "topology_use",
+      "path": [
+        {
+          "id": 114,
+          "type": 1,
+          "tag": 26502,
+          "child_index": -1,
+          "orientation": 0
+        },
+        {
+          "id": 126,
+          "type": 4,
+          "tag": 0,
+          "child_index": 0,
+          "orientation": 0
+        },
+        {
+          "id": 158,
+          "type": 5,
+          "tag": 26694,
+          "child_index": 3,
+          "orientation": 0
+        },
+        {
+          "id": 157,
+          "type": 6,
+          "tag": 0,
+          "child_index": 0,
+          "orientation": 0
+        }
+      ],
+      "face": 26694,
+      "face_type": 43,
+      "children": 1
+    },
+    {
+      "kind": "topology_use",
+      "path": [
+        {
+          "id": 114,
+          "type": 1,
+          "tag": 26502,
+          "child_index": -1,
+          "orientation": 0
+        },
+        {
+          "id": 126,
+          "type": 4,
+          "tag": 0,
+          "child_index": 0,
+          "orientation": 0
+        },
+        {
+          "id": 158,
+          "type": 5,
+          "tag": 26694,
+          "child_index": 3,
+          "orientation": 0
+        },
+        {
+          "id": 157,
+          "type": 6,
+          "tag": 0,
+          "child_index": 0,
+          "orientation": 0
+        },
+        {
+          "id": 156,
+          "type": 7,
+          "tag": 0,
+          "child_index": 0,
+          "orientation": -1
+        }
+      ],
+      "face": 26694,
+      "face_type": 43,
+      "children": 1
+    },
+    {
+      "kind": "topology_use",
+      "path": [
+        {
+          "id": 114,
+          "type": 1,
+          "tag": 26502,
+          "child_index": -1,
+          "orientation": 0
+        },
+        {
+          "id": 126,
+          "type": 4,
+          "tag": 0,
+          "child_index": 0,
+          "orientation": 0
+        },
+        {
+          "id": 158,
+          "type": 5,
+          "tag": 26694,
+          "child_index": 3,
+          "orientation": 0
+        },
+        {
+          "id": 157,
+          "type": 6,
+          "tag": 0,
+          "child_index": 0,
+          "orientation": 0
+        },
+        {
+          "id": 156,
+          "type": 7,
+          "tag": 0,
+          "child_index": 0,
+          "orientation": -1
+        },
+        {
+          "id": 151,
+          "type": 8,
+          "tag": 26697,
+          "child_index": 0,
+          "orientation": -1
+        }
+      ],
+      "face": 26694,
+      "face_type": 43,
+      "children": 0
+    },
+    {
+      "kind": "topology_use",
+      "path": [
+        {
+          "id": 114,
+          "type": 1,
+          "tag": 26502,
+          "child_index": -1,
+          "orientation": 0
+        },
+        {
+          "id": 126,
+          "type": 4,
+          "tag": 0,
+          "child_index": 0,
+          "orientation": 0
+        },
+        {
+          "id": 158,
+          "type": 5,
+          "tag": 26694,
+          "child_index": 3,
+          "orientation": 0
+        },
+        {
+          "id": 159,
+          "type": 6,
+          "tag": 0,
+          "child_index": 1,
+          "orientation": 0
+        }
+      ],
+      "face": 26694,
+      "face_type": 43,
+      "children": 1
+    },
+    {
+      "kind": "topology_use",
+      "path": [
+        {
+          "id": 114,
+          "type": 1,
+          "tag": 26502,
+          "child_index": -1,
+          "orientation": 0
+        },
+        {
+          "id": 126,
+          "type": 4,
+          "tag": 0,
+          "child_index": 0,
+          "orientation": 0
+        },
+        {
+          "id": 158,
+          "type": 5,
+          "tag": 26694,
+          "child_index": 3,
+          "orientation": 0
+        },
+        {
+          "id": 159,
+          "type": 6,
+          "tag": 0,
+          "child_index": 1,
+          "orientation": 0
+        },
+        {
+          "id": 148,
+          "type": 7,
+          "tag": 0,
+          "child_index": 0,
+          "orientation": -1
+        }
+      ],
+      "face": 26694,
+      "face_type": 43,
+      "children": 1
+    },
+    {
+      "kind": "topology_use",
+      "path": [
+        {
+          "id": 114,
+          "type": 1,
+          "tag": 26502,
+          "child_index": -1,
+          "orientation": 0
+        },
+        {
+          "id": 126,
+          "type": 4,
+          "tag": 0,
+          "child_index": 0,
+          "orientation": 0
+        },
+        {
+          "id": 158,
+          "type": 5,
+          "tag": 26694,
+          "child_index": 3,
+          "orientation": 0
+        },
+        {
+          "id": 159,
+          "type": 6,
+          "tag": 0,
+          "child_index": 1,
+          "orientation": 0
+        },
+        {
+          "id": 148,
+          "type": 7,
+          "tag": 0,
+          "child_index": 0,
+          "orientation": -1
+        },
+        {
+          "id": 149,
+          "type": 8,
+          "tag": 26696,
+          "child_index": 0,
+          "orientation": -1
+        }
+      ],
+      "face": 26694,
+      "face_type": 43,
+      "children": 0
+    }
+  ]
+}

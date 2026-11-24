@@ -1,0 +1,311 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nx-ai-lab:p13:context-v1",
+  "$comment": "Narrow v1 implementation. capture_complete is getter coverage only; THREAD_CONTRACT_UNKNOWN remains. Structure validation never proves authorization, correlation or geometry. No URL fetch needed.",
+  "oneOf": [
+    {
+      "$ref": "#/$defs/request"
+    },
+    {
+      "$ref": "#/$defs/response"
+    }
+  ],
+  "$defs": {
+    "receipt": {
+      "type": "object",
+      "required": [
+        "value",
+        "source",
+        "status",
+        "error",
+        "capture_timestamp"
+      ],
+      "properties": {
+        "value": {},
+        "source": {
+          "type": "string",
+          "minLength": 1
+        },
+        "status": {
+          "type": "string",
+          "minLength": 1
+        },
+        "error": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "object",
+              "required": [
+                "type",
+                "message"
+              ],
+              "properties": {
+                "type": {
+                  "type": "string"
+                },
+                "message": {
+                  "type": "string"
+                }
+              },
+              "additionalProperties": false
+            }
+          ]
+        },
+        "capture_timestamp": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "additionalProperties": false
+    },
+    "request": {
+      "type": "object",
+      "required": [
+        "wire_version",
+        "command",
+        "request_uuid"
+      ],
+      "properties": {
+        "wire_version": {
+          "const": 2
+        },
+        "command": {
+          "const": "nx_readonly_context"
+        },
+        "request_uuid": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$",
+          "not": {
+            "const": "00000000-0000-0000-0000-000000000000"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "response": {
+      "type": "object",
+      "required": [
+        "wire_version",
+        "schema_version",
+        "command",
+        "request_uuid",
+        "outcome",
+        "capture_complete",
+        "geometry_acceptance",
+        "snapshot_atomic",
+        "context",
+        "error",
+        "response_created_at",
+        "request_uuid_bound_to_completion_slot",
+        "binding_semantics"
+      ],
+      "properties": {
+        "wire_version": {
+          "const": 2
+        },
+        "schema_version": {
+          "const": "p13-context-v1"
+        },
+        "command": {
+          "const": "nx_readonly_context"
+        },
+        "request_uuid": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$",
+          "not": {
+            "const": "00000000-0000-0000-0000-000000000000"
+          }
+        },
+        "outcome": {
+          "enum": [
+            "CAPTURE_COMPLETED",
+            "CAPTURE_PARTIAL",
+            "CAPTURE_FAILED",
+            "THREAD_CONTRACT_UNKNOWN",
+            "LIMIT_EXCEEDED",
+            "UNKNOWN_EXECUTION_OUTCOME"
+          ]
+        },
+        "capture_complete": {
+          "type": "boolean"
+        },
+        "geometry_acceptance": {
+          "const": false
+        },
+        "snapshot_atomic": {
+          "const": false
+        },
+        "context": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "$ref": "#/$defs/context"
+            }
+          ]
+        },
+        "error": {
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "response_created_at": {
+          "type": "string"
+        },
+        "request_uuid_bound_to_completion_slot": {
+          "const": true
+        },
+        "binding_semantics": {
+          "const": "SERVER_ASSERTION_CLIENT_MUST_INDEPENDENTLY_VERIFY_UUID_VERSION_COMMAND"
+        }
+      },
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "outcome": {
+                "not": {
+                  "const": "CAPTURE_COMPLETED"
+                }
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "capture_complete": {
+                "const": false
+              }
+            }
+          }
+        }
+      ]
+    },
+    "context": {
+      "type": "object",
+      "required": [
+        "schema_version",
+        "fields",
+        "capture_window",
+        "capture_complete",
+        "geometry_acceptance"
+      ],
+      "properties": {
+        "schema_version": {
+          "const": "p13-minimal-context-v1"
+        },
+        "fields": {
+          "type": "object",
+          "required": [
+            "process.pid",
+            "assembly.location",
+            "assembly.mvid",
+            "assembly.version",
+            "assembly.disk_file_sha256",
+            "thread_contract",
+            "session.cached_present",
+            "session.fresh_available",
+            "session.managed_reference_equals",
+            "work_part",
+            "display_part",
+            "loaded_parts",
+            "loaded_modified_summary",
+            "uf.loaded_count",
+            "uf.loaded_tags",
+            "uf.work_tag",
+            "uf.display_tag",
+            "crosscheck.loaded_tags"
+          ],
+          "properties": {
+            "process.pid": {
+              "$ref": "#/$defs/receipt"
+            },
+            "assembly.location": {
+              "$ref": "#/$defs/receipt"
+            },
+            "assembly.mvid": {
+              "$ref": "#/$defs/receipt"
+            },
+            "assembly.version": {
+              "$ref": "#/$defs/receipt"
+            },
+            "assembly.disk_file_sha256": {
+              "$ref": "#/$defs/receipt"
+            },
+            "thread_contract": {
+              "$ref": "#/$defs/receipt"
+            },
+            "session.cached_present": {
+              "$ref": "#/$defs/receipt"
+            },
+            "session.fresh_available": {
+              "$ref": "#/$defs/receipt"
+            },
+            "session.managed_reference_equals": {
+              "$ref": "#/$defs/receipt"
+            },
+            "work_part": {
+              "$ref": "#/$defs/receipt"
+            },
+            "display_part": {
+              "$ref": "#/$defs/receipt"
+            },
+            "loaded_parts": {
+              "$ref": "#/$defs/receipt"
+            },
+            "loaded_modified_summary": {
+              "$ref": "#/$defs/receipt"
+            },
+            "uf.loaded_count": {
+              "$ref": "#/$defs/receipt"
+            },
+            "uf.loaded_tags": {
+              "$ref": "#/$defs/receipt"
+            },
+            "uf.work_tag": {
+              "$ref": "#/$defs/receipt"
+            },
+            "uf.display_tag": {
+              "$ref": "#/$defs/receipt"
+            },
+            "crosscheck.loaded_tags": {
+              "$ref": "#/$defs/receipt"
+            }
+          },
+          "additionalProperties": false
+        },
+        "capture_window": {
+          "type": "object",
+          "required": [
+            "started_at",
+            "ended_at",
+            "atomic"
+          ],
+          "properties": {
+            "started_at": {
+              "type": "string"
+            },
+            "ended_at": {
+              "type": "string"
+            },
+            "atomic": {
+              "const": false
+            }
+          },
+          "additionalProperties": false
+        },
+        "capture_complete": {
+          "type": "boolean"
+        },
+        "geometry_acceptance": {
+          "const": false
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

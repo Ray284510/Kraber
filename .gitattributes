@@ -1,0 +1,4 @@
+# Preserve original bytes on Windows and Linux (build pins and evidence digests).
+* -text
+*.png binary
+*.prt binary

@@ -1,0 +1,13 @@
+[
+  "nx_inspect",
+  "nx_list_edges BODY_1",
+  "nx_blend_strict BODY_1 2 0,1,10,11",
+  "nx_inspect",
+  "nx_fit_view",
+  "nx_save_part",
+  "nx_export_step {NX_AI_LAB_ROOT}/models/acceptance_plate.step",
+  "nx_close_part 1",
+  "nx_open_part {NX_AI_LAB_ROOT}/models/acceptance_plate.prt",
+  "nx_inspect",
+  "nx_fit_view"
+]

@@ -1,0 +1,55 @@
+{
+  "source_sha256": "94ef68015722212357ea2dc1ed11131c4e36a96e0c4e4ba5ecae303c776b6321",
+  "source_selection": [
+    "scope",
+    "result",
+    "motion_measured_mm",
+    "travel_x_mm",
+    "dimensions_excluding_hardware_mm",
+    "hardware_status",
+    "endpoints_checked",
+    "continuous_sweep",
+    "physical_print_and_fit",
+    "final_session_modified"
+  ],
+  "scope": "R7 independent decorative tabletop stand; Siemens NX 12.0.2.9; geometry and assembly only",
+  "result": "PASS",
+  "motion_measured_mm": {
+    "middle": [
+      39.0,
+      13.4,
+      6.0
+    ],
+    "start": [
+      11.999999999999996,
+      13.4,
+      6.0
+    ],
+    "end": [
+      66.0,
+      13.4,
+      6.0
+    ],
+    "restored_middle": [
+      39.0,
+      13.4,
+      6.0
+    ],
+    "reopened": [
+      39.0,
+      13.4,
+      6.0
+    ]
+  },
+  "travel_x_mm": 54.0,
+  "dimensions_excluding_hardware_mm": [
+    100,
+    48,
+    20.5
+  ],
+  "hardware_status": "UNVERIFIED_CANDIDATE",
+  "endpoints_checked": 3,
+  "continuous_sweep": "NOT_RUN",
+  "physical_print_and_fit": "NOT_RUN",
+  "final_session_modified": false
+}

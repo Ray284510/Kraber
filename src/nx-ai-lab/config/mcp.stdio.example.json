@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "nx12": {
+      "command": "<absolute-path-to-venv-python>",
+      "args": [
+        "<absolute-path-to-bridge-mcp_server.py>"
+      ]
+    }
+  }
+}

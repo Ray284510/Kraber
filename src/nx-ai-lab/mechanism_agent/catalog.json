@@ -1,0 +1,344 @@
+{
+  "schema_version": 1,
+  "status_policy": "NX acceptance is recorded per implementation/configuration; family membership does not transfer validation.",
+  "mechanisms": [
+    {
+      "family": "fourbar",
+      "type": "crank_rocker",
+      "status": "nx_verified_configuration",
+      "nx_evidence": "logs\\phase4\\fourbar_20261107_161540",
+      "auto_build_allowed": true,
+      "scope": "100/25/90/70 mm tested crank-rocker and bounded builder workflow; other sizes require new acceptance"
+    },
+    {
+      "family": "fourbar",
+      "type": "double_crank",
+      "status": "nx_verified_configuration",
+      "nx_evidence": "logs\\phase4\\completion_double_crank_20261107_205147",
+      "auto_build_allowed": true,
+      "scope": "Input and output bars occupy separate axial layers. Opposed ground bearings and an elevated frame avoid a fixed shaft crossing the rotating input. Coupler connects in the middle layer with real stepped-length pivot shafts. No collision-hiding component repositioning. Only this geometry and recorded discrete native trajectory; no dynamics or continuous collision guarantee."
+    },
+    {
+      "family": "fourbar",
+      "type": "double_rocker",
+      "status": "nx_verified_configuration",
+      "nx_evidence": "logs\\phase4\\completion_double_rocker_20261107_210040",
+      "auto_build_allowed": true,
+      "scope": "Input and output bars occupy separate axial layers. Opposed ground bearings and an elevated frame avoid a fixed shaft crossing the rotating input. Coupler connects in the middle layer with real stepped-length pivot shafts. No collision-hiding component repositioning. Only this geometry and recorded discrete native trajectory; no dynamics or continuous collision guarantee."
+    },
+    {
+      "family": "fourbar",
+      "type": "slider_crank",
+      "status": "nx_verified_configuration",
+      "nx_evidence": "logs\\phase4\\feeder_20261107_195939",
+      "auto_build_allowed": true,
+      "scope": "Inline R-R-R-P feeding mechanism with 100 mm rod and real 15–25 mm radial adjustment slot; three native settings verify 30/40/50 mm strokes and time ratio 1.0. Each has 121 native frames, STEP/PRT/SIM reopen and cold GUI acceptance. No clamp-force, friction or payload validation."
+    },
+    {
+      "family": "fourbar",
+      "type": "oscillating_block",
+      "status": "nx_verified_configuration",
+      "nx_evidence": "logs\\phase4\\completion_oscillating_block_20261107_212325",
+      "auto_build_allowed": true,
+      "scope": "Short closed pivoting sleeve and long sliding rod. Ground is the original connecting rod; the original slider rocks about its grounded revolute. Only this geometry and recorded discrete native trajectory; no dynamics or continuous collision guarantee."
+    },
+    {
+      "family": "fourbar",
+      "type": "fixed_block",
+      "status": "nx_verified_configuration",
+      "nx_evidence": "logs\\phase4\\completion_fixed_block_20261107_213550",
+      "auto_build_allowed": true,
+      "scope": "Fixed short sleeve is the original slider. The original frame becomes a long translating pump rod; an 80 mm grounded rocker drives a 45 mm connecting member. It is not a moving slider block on a grounded long rail. The 35 mm candidate was rejected before modeling because its maximum pressure angle was 58.9 degrees; 45 mm keeps it below 45 degrees. Only this geometry and recorded discrete native trajectory; no dynamics or continuous collision guarantee."
+    },
+    {
+      "family": "fourbar",
+      "type": "guide_bar",
+      "status": "nx_verified_configuration",
+      "nx_evidence": "logs\\phase4\\completion_guide_bar_20261107_211551",
+      "auto_build_allowed": true,
+      "scope": "Long pivoted T-slot guide and captive moving slider block. Ground is the original crank; the P pair travels with the guide. Only this geometry and recorded discrete native trajectory; no dynamics or continuous collision guarantee."
+    },
+    {
+      "family": "cam",
+      "type": "disk_cam",
+      "status": "nx_verified_configuration",
+      "nx_evidence": "logs\\phase4\\cam_groove_20261107_165028",
+      "auto_build_allowed": true,
+      "scope": "Grooved disk with translating roller, 12 mm cycloidal lift and 0.2 mm real running clearance; native PointOnCurve nominal pitch-line closure. No force contact or backlash dynamics validation. External zero-gap cam variant failed intersection checks.",
+      "separately_verified_configurations": [
+        {
+          "type": "cam_external_roller",
+          "evidence": "logs\\phase4\\completion_cam_external_roller_20261107_214659",
+          "scope": "Exact eccentric circular disk and actual external follower geometry. Native geometric contact is a bilateral kinematic relation, not a preload or force-contact dynamics validation. Only this geometry and recorded discrete native trajectory; no dynamics or continuous collision guarantee."
+        },
+        {
+          "type": "cam_external_tip",
+          "evidence": "logs\\phase4\\completion_cam_external_tip_20261107_215119",
+          "scope": "Exact eccentric circular disk and actual external follower geometry. Native geometric contact is a bilateral kinematic relation, not a preload or force-contact dynamics validation. Only this geometry and recorded discrete native trajectory; no dynamics or continuous collision guarantee."
+        },
+        {
+          "type": "cam_groove_quintic",
+          "evidence": "logs\\phase4\\completion_cam_groove_quintic_20261107_222848",
+          "scope": "Groove has inner and outer offset walls and an intact floor. Roller moves within real clearance. Local spin is gauged separately and tested for no effect on follower travel. Only this geometry and recorded discrete native trajectory; no dynamics or continuous collision guarantee."
+        }
+      ],
+      "historical_status_scope": "The original status/evidence remains historical. See separately_verified_configurations for additional exact geometries; older failed models are not retroactively passed."
+    },
+    {
+      "family": "cam",
+      "type": "translating_follower",
+      "status": "nx_verified_configuration",
+      "nx_evidence": "logs\\phase4\\cam_groove_20261107_165028",
+      "auto_build_allowed": true,
+      "scope": "Grooved disk with translating roller, 12 mm cycloidal lift and 0.2 mm real running clearance; native PointOnCurve nominal pitch-line closure. No force contact or backlash dynamics validation. External zero-gap cam variant failed intersection checks."
+    },
+    {
+      "family": "cam",
+      "type": "oscillating_follower",
+      "status": "research_or_planned",
+      "nx_evidence": null,
+      "auto_build_allowed": false,
+      "separately_verified_configurations": [
+        {
+          "type": "cam_oscillating_roller",
+          "evidence": "logs\\phase4\\completion_cam_oscillating_roller_20261107_220844",
+          "scope": "Exact eccentric circular disk and actual external follower geometry. Native geometric contact is a bilateral kinematic relation, not a preload or force-contact dynamics validation. Only this geometry and recorded discrete native trajectory; no dynamics or continuous collision guarantee."
+        },
+        {
+          "type": "cam_oscillating_tip",
+          "evidence": "logs\\phase4\\completion_cam_oscillating_tip_20261107_222129",
+          "scope": "Exact eccentric circular disk and actual external follower geometry. Native geometric contact is a bilateral kinematic relation, not a preload or force-contact dynamics validation. Only this geometry and recorded discrete native trajectory; no dynamics or continuous collision guarantee."
+        }
+      ],
+      "historical_status_scope": "The original status/evidence remains historical. See separately_verified_configurations for additional exact geometries; older failed models are not retroactively passed."
+    },
+    {
+      "family": "cam",
+      "type": "roller_follower",
+      "status": "nx_verified_configuration",
+      "nx_evidence": "logs\\phase4\\cam_groove_20261107_165028",
+      "auto_build_allowed": true,
+      "scope": "Grooved disk with translating roller, 12 mm cycloidal lift and 0.2 mm real running clearance; native PointOnCurve nominal pitch-line closure. No force contact or backlash dynamics validation. External zero-gap cam variant failed intersection checks.",
+      "separately_verified_configurations": [
+        {
+          "type": "cam_external_roller",
+          "evidence": "logs\\phase4\\completion_cam_external_roller_20261107_214659",
+          "scope": "Exact eccentric circular disk and actual external follower geometry. Native geometric contact is a bilateral kinematic relation, not a preload or force-contact dynamics validation. Only this geometry and recorded discrete native trajectory; no dynamics or continuous collision guarantee."
+        },
+        {
+          "type": "cam_oscillating_roller",
+          "evidence": "logs\\phase4\\completion_cam_oscillating_roller_20261107_220844",
+          "scope": "Exact eccentric circular disk and actual external follower geometry. Native geometric contact is a bilateral kinematic relation, not a preload or force-contact dynamics validation. Only this geometry and recorded discrete native trajectory; no dynamics or continuous collision guarantee."
+        }
+      ],
+      "historical_status_scope": "The original status/evidence remains historical. See separately_verified_configurations for additional exact geometries; older failed models are not retroactively passed."
+    },
+    {
+      "family": "cam",
+      "type": "knife_edge_follower",
+      "status": "nx_test_failed",
+      "nx_evidence": "logs\\phase4\\cam_knife_20261107_164529",
+      "auto_build_allowed": false,
+      "scope": "Native positive intersection was measured; not accepted.",
+      "separately_verified_configurations": [
+        {
+          "type": "cam_external_tip",
+          "evidence": "logs\\phase4\\completion_cam_external_tip_20261107_215119",
+          "scope": "Exact eccentric circular disk and actual external follower geometry. Native geometric contact is a bilateral kinematic relation, not a preload or force-contact dynamics validation. Only this geometry and recorded discrete native trajectory; no dynamics or continuous collision guarantee."
+        },
+        {
+          "type": "cam_oscillating_tip",
+          "evidence": "logs\\phase4\\completion_cam_oscillating_tip_20261107_222129",
+          "scope": "Exact eccentric circular disk and actual external follower geometry. Native geometric contact is a bilateral kinematic relation, not a preload or force-contact dynamics validation. Only this geometry and recorded discrete native trajectory; no dynamics or continuous collision guarantee."
+        }
+      ],
+      "historical_status_scope": "The original status/evidence remains historical. See separately_verified_configurations for additional exact geometries; older failed models are not retroactively passed."
+    },
+    {
+      "family": "gears",
+      "type": "external_gears",
+      "status": "nx_verified_configuration",
+      "nx_evidence": "logs\\phase4\\planetary_20261107_185923",
+      "auto_build_allowed": true,
+      "scope": "40/20/80-tooth, three-planet fixed-ring transmission. Three native external Gear couplers plus one native General rotational Willis coupler. 241 output frames, 20 cross-link pairs, all six mesh closure relations checked. No resolved tooth-force/backlash dynamics or continuous collision guarantee. This verifies this planetary configuration only; the direct internal Gear-coupler setup failed and remains unsupported by that setup."
+    },
+    {
+      "family": "gears",
+      "type": "internal_gears",
+      "status": "nx_verified_configuration",
+      "nx_evidence": "logs\\phase4\\planetary_20261107_185923",
+      "auto_build_allowed": true,
+      "scope": "40/20/80-tooth, three-planet fixed-ring transmission. Three native external Gear couplers plus one native General rotational Willis coupler. 241 output frames, 20 cross-link pairs, all six mesh closure relations checked. No resolved tooth-force/backlash dynamics or continuous collision guarantee. This verifies this planetary configuration only; the direct internal Gear-coupler setup failed and remains unsupported by that setup.",
+      "capability_breakdown": {
+        "internal_involute_geometry": "nx_verified_configuration",
+        "willis_general_relation": "nx_verified_configuration",
+        "direct_internal_gear_coupler": "not_verified_by_original_planetary_run",
+        "tooth_contact_dynamics": "not_verified"
+      },
+      "separately_verified_configurations": [
+        {
+          "type": "internal_gears_direct",
+          "evidence": "logs\\phase4\\completion_internal_gears_direct_20261107_225343",
+          "scope": "Actual fixed-centre 80/20 internal ring/pinion with native CouplerGear, radii +60/-15 mm and native contact reference (60,0,24). Undriven pinion follows ring with measured same-sign speed ratio 4. One native Gear relation, no General Willis replacement. True sampled-involute geometry and 241 discrete all-component interference checks; ideal transmission, not resolved tooth-force contact. Only this geometry and recorded discrete native trajectory; no dynamics or continuous collision guarantee."
+        }
+      ],
+      "historical_status_scope": "The original status/evidence remains historical. See separately_verified_configurations for additional exact geometries; older failed models are not retroactively passed."
+    },
+    {
+      "family": "gears",
+      "type": "planetary_gears",
+      "status": "nx_verified_configuration",
+      "nx_evidence": "logs\\phase4\\planetary_20261107_185923",
+      "auto_build_allowed": true,
+      "scope": "40/20/80-tooth, three-planet fixed-ring transmission. Three native external Gear couplers plus one native General rotational Willis coupler. 241 output frames, 20 cross-link pairs, all six mesh closure relations checked. No resolved tooth-force/backlash dynamics or continuous collision guarantee. This verifies this planetary configuration only; the direct internal Gear-coupler setup failed and remains unsupported by that setup."
+    },
+    {
+      "family": "gears",
+      "type": "rack_pinion",
+      "status": "nx_verified_configuration",
+      "nx_evidence": "logs\\phase4\\completion_rack_pinion_20261107_223356",
+      "auto_build_allowed": true,
+      "scope": "True 20 degree straight-flank rack and sampled-involute pinion, native rack/pinion coupler, captured T-slide; one continuous rotation produces finite rack travel, not a reciprocating motion. Ideal rigid transmission only; no torque, contact dynamics, tooth stress or manufacturing qualification. Only this geometry and recorded discrete native trajectory; no dynamics or continuous collision guarantee. Runtime limitations: NX native CouplerRckpn ideal relation verified; automatic ContactPoint returned (0,30,28) rather than physical pitch contact (0,0,28). No contact-force location or force-resolved dynamics accepted. Ratio=-15 is verified only for this axis convention."
+    },
+    {
+      "family": "gears",
+      "type": "multistage_gears",
+      "status": "nx_verified_configuration",
+      "nx_evidence": "logs\\phase4\\completion_multistage_gears_20261107_224301",
+      "auto_build_allowed": true,
+      "scope": "Two external involute meshes on separated axial planes; one rigid compound shaft. Three revolute links and two native Gear relations; one functional DOF. Ideal rigid transmission only; no torque, contact dynamics, tooth stress or manufacturing qualification. Only this geometry and recorded discrete native trajectory; no dynamics or continuous collision guarantee."
+    },
+    {
+      "family": "parallel",
+      "type": "delta",
+      "status": "nx_verified_configuration",
+      "nx_evidence": "logs\\phase4\\delta_20261107_194519",
+      "auto_build_allowed": true,
+      "scope": "11-part, three-translation Delta demonstrator: 3 R, 6 U, 6 S native Motion joints, native unactuated DOF 3 and driven DOF 0. 61 frames x 55 cross-link pairs. Upper Universal bearings use simplified spherical housing envelopes; detailed cross-pin hardware, loads and strength are not validated."
+    },
+    {
+      "family": "parallel",
+      "type": "multiple_spatial_branches",
+      "status": "nx_verified_configuration",
+      "nx_evidence": "logs\\phase4\\delta_20261107_194519",
+      "auto_build_allowed": true,
+      "scope": "11-part, three-translation Delta demonstrator: 3 R, 6 U, 6 S native Motion joints, native unactuated DOF 3 and driven DOF 0. 61 frames x 55 cross-link pairs. Upper Universal bearings use simplified spherical housing envelopes; detailed cross-pin hardware, loads and strength are not validated."
+    },
+    {
+      "family": "parallel",
+      "type": "spherical_mechanism",
+      "status": "research_or_planned",
+      "nx_evidence": null,
+      "auto_build_allowed": false
+    },
+    {
+      "family": "intermittent",
+      "type": "geneva",
+      "status": "nx_build_verified_motion_failed",
+      "nx_evidence": "logs\\phase4\\completion_geneva_20261108_021319",
+      "auto_build_allowed": false,
+      "scope": "Real three-part mechanism and native contact solve tested. Output indexing failed and positive intersection was measured; no accepted automatic realization route and no output driver replacing engagement.",
+      "failure_reason": "Whole-body native contact remained partial in bounded observations; final face-contact solve indexed0deg instead of60deg and native frame85 intersection0.316199438mm3. Three repair rounds consumed."
+    },
+    {
+      "family": "intermittent",
+      "type": "ratchet",
+      "status": "nx_build_verified_motion_incomplete",
+      "nx_evidence": "logs\\phase4\\completion_ratchet_20261108_025005",
+      "auto_build_allowed": false,
+      "scope": "Real seven-part assembly and partial native contact dynamics only; no output wheel or pawl motion driver. Full eight-second indexing and cold-reopen acceptance incomplete.",
+      "failure_reason": "Three contact repair rounds consumed. Round2 positive native intersection; round3 exact circular pawls had10clear samples but only0.1537275059of8s before normalStop, not full acceptance."
+    },
+    {
+      "family": "cam",
+      "type": "cam_external_roller",
+      "status": "nx_verified_configuration",
+      "nx_evidence": "logs\\phase4\\completion_cam_external_roller_20261107_214659",
+      "auto_build_allowed": true,
+      "scope": "Exact eccentric circular disk and actual external follower geometry. Native geometric contact is a bilateral kinematic relation, not a preload or force-contact dynamics validation. Only this geometry and recorded discrete native trajectory; no dynamics or continuous collision guarantee."
+    },
+    {
+      "family": "cam",
+      "type": "cam_external_tip",
+      "status": "nx_verified_configuration",
+      "nx_evidence": "logs\\phase4\\completion_cam_external_tip_20261107_215119",
+      "auto_build_allowed": true,
+      "scope": "Exact eccentric circular disk and actual external follower geometry. Native geometric contact is a bilateral kinematic relation, not a preload or force-contact dynamics validation. Only this geometry and recorded discrete native trajectory; no dynamics or continuous collision guarantee."
+    },
+    {
+      "family": "cam",
+      "type": "cam_oscillating_roller",
+      "status": "nx_verified_configuration",
+      "nx_evidence": "logs\\phase4\\completion_cam_oscillating_roller_20261107_220844",
+      "auto_build_allowed": true,
+      "scope": "Exact eccentric circular disk and actual external follower geometry. Native geometric contact is a bilateral kinematic relation, not a preload or force-contact dynamics validation. Only this geometry and recorded discrete native trajectory; no dynamics or continuous collision guarantee."
+    },
+    {
+      "family": "cam",
+      "type": "cam_oscillating_tip",
+      "status": "nx_verified_configuration",
+      "nx_evidence": "logs\\phase4\\completion_cam_oscillating_tip_20261107_222129",
+      "auto_build_allowed": true,
+      "scope": "Exact eccentric circular disk and actual external follower geometry. Native geometric contact is a bilateral kinematic relation, not a preload or force-contact dynamics validation. Only this geometry and recorded discrete native trajectory; no dynamics or continuous collision guarantee."
+    },
+    {
+      "family": "cam",
+      "type": "cam_groove_quintic",
+      "status": "nx_verified_configuration",
+      "nx_evidence": "logs\\phase4\\completion_cam_groove_quintic_20261107_222848",
+      "auto_build_allowed": true,
+      "scope": "Groove has inner and outer offset walls and an intact floor. Roller moves within real clearance. Local spin is gauged separately and tested for no effect on follower travel. Only this geometry and recorded discrete native trajectory; no dynamics or continuous collision guarantee."
+    },
+    {
+      "family": "gears",
+      "type": "internal_gears_direct",
+      "status": "nx_verified_configuration",
+      "auto_build_allowed": true,
+      "nx_evidence": "logs\\phase4\\completion_internal_gears_direct_20261107_225343",
+      "scope": "Actual fixed-centre 80/20 internal ring/pinion with native CouplerGear, radii +60/-15 mm and native contact reference (60,0,24). Undriven pinion follows ring with measured same-sign speed ratio 4. One native Gear relation, no General Willis replacement. True sampled-involute geometry and 241 discrete all-component interference checks; ideal transmission, not resolved tooth-force contact. Only this geometry and recorded discrete native trajectory; no dynamics or continuous collision guarantee."
+    },
+    {
+      "family": "gears",
+      "type": "planetary_fixed_carrier",
+      "status": "nx_verified_configuration",
+      "auto_build_allowed": true,
+      "nx_evidence": "logs\\phase4\\completion_planetary_fixed_carrier_20261107_230412",
+      "scope": "New annular ground housing supports the rotating ring; grounding the carrier changes physical motion. Three native external Gear couplers plus one signed-radius native internal Gear pair. The other two internal mesh relations are independently checked from all actual planet trajectories; no contact-force dynamics is claimed. Only this geometry and recorded discrete native trajectory; no dynamics or continuous collision guarantee."
+    },
+    {
+      "family": "gears",
+      "type": "planetary_fixed_sun",
+      "status": "nx_verified_configuration",
+      "auto_build_allowed": true,
+      "nx_evidence": "logs\\phase4\\completion_planetary_fixed_sun_20261108_004104",
+      "scope": "New annular ground housing supports the rotating ring; grounding the sun changes physical motion. Three native external Gear couplers plus one signed-radius native internal Gear pair. The other two internal mesh relations are independently checked from all actual planet trajectories; no contact-force dynamics is claimed. Only this geometry and recorded discrete native trajectory; no dynamics or continuous collision guarantee."
+    },
+    {
+      "family": "cloud_synthesis_development_case",
+      "type": "agent_low_pairs",
+      "mechanism": "inline_slider_crank",
+      "status": "nx_verified_configuration",
+      "auto_build_allowed": true,
+      "scope": "New dimensioned proposal from structured cloud reasoning and independent candidate comparison. True radial pin-adjustment slot, separate parts and low-pair native closed loop; new acceptance required. Pin clamp, friction, payload and force control are not validated. Only this geometry and recorded discrete native trajectory; no dynamics or continuous collision guarantee.",
+      "nx_evidence": "logs\\phase4\\completion_agent_low_pairs_20261108_002411"
+    },
+    {
+      "family": "cloud_synthesis_development_case",
+      "type": "agent_dwell_lift",
+      "mechanism": "disk_cam",
+      "status": "nx_verified_configuration",
+      "auto_build_allowed": true,
+      "scope": "Dimensioned grooved cam with real 0.2 mm radial clearance, native nominal PointOnCurve relation and independent local roller spin test. No preload, force contact or backlash dynamics acceptance. Only this geometry and recorded discrete native trajectory; no dynamics or continuous collision guarantee.",
+      "nx_evidence": "logs\\phase4\\completion_agent_dwell_lift_20261108_002957"
+    },
+    {
+      "family": "cloud_synthesis_development_case",
+      "type": "agent_harmonic",
+      "mechanism": "scotch_yoke",
+      "status": "nx_verified_configuration",
+      "auto_build_allowed": true,
+      "scope": "Physical slotted yoke and adjustable crank pin with 0.2 mm radial clearance. Native PointOnCurve constrains pin centre to slot centreline; only input rotation is driven. Ideal bilateral kinematics, no friction, preload, contact-force or wear claim. Ground guide captures the output arm. Adjustability requires relocating/clamping the crank pin between runs; no in-motion adjustment claim. Only this geometry and recorded discrete native trajectory; no dynamics or continuous collision guarantee.",
+      "nx_evidence": "logs\\phase4\\completion_agent_harmonic_20261108_003443"
+    }
+  ]
+}

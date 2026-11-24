@@ -1,0 +1,9 @@
+[
+  "nx_create_sketch XY",
+  "nx_sketch_rectangle SKETCH_1 0 0 80 50",
+  "nx_dimension_rectangle SKETCH_1 plate 80 50",
+  "nx_finish_sketch SKETCH_1",
+  "nx_extrude SKETCH_1 10 0 0 create",
+  "nx_inspect",
+  "nx_list_edges BODY_1"
+]

@@ -1,0 +1,17 @@
+{
+  "version": "P05-source-match-v1",
+  "fixed_before_mapping": true,
+  "UV_residual_max_chart_units": 1e-12,
+  "support_XYZ_residual_max_mm": 1e-9,
+  "raw_XYZ_residual_max_mm": 1e-9,
+  "parameter_root_bracket_local_width": 1e-12,
+  "root_max_depth": 96,
+  "same_source_requires": ["same verified model hash", "same semantic Face/Edge use", "current own-chart UV inversion", "support-point agreement", "raw classified XYZ agreement", "no unresolved candidate intervals"],
+  "threshold_purpose": "Numerical source-coincidence audit only, much tighter than 0.001 mm geometry gate; not a modeling tolerance or exact identity proof",
+  "periodic_policy": "Enumerate integral U shifts using recorded support-chart period only; retain endpoints and equivalent candidates; original use phase stays unknown",
+  "projection_policy": "Reuse exact rational polynomial/GCD/Sturm core; all relevant spans and both knot-side endpoints; positive-weight rational Bezier hull pruning only with exact lower and upper squared bounds; residuals independently recomputed in archived curve evaluator",
+  "classification_policy": "Retain historical raw Face/Edge states; never interpolate labels or confer current NX classification. Support-only match cannot inherit raw-point status as a FINSP witness.",
+  "unresolved_policy": "Keep unresolved/continuum/multiple candidates; no unique or global 3D distance claim",
+  "geometry_gate_mm": 0.001,
+  "STEP_gate_mm3": 0.1
+}

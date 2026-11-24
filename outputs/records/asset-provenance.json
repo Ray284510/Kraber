@@ -1,0 +1,196 @@
+{
+  "images/nx12/acceptance-plate.png": {
+    "source_capture_sha256": "8059d7011f8952169e7bb96441374abf7c39954ee16d941153306aaed86597d5",
+    "crop": [
+      434,
+      245,
+      1925,
+      998
+    ],
+    "redaction": [
+      1482,
+      725,
+      1937,
+      1037
+    ]
+  },
+  "images/nx12/joint-assembly.png": {
+    "source_capture_sha256": "07c74fa3e0547e41902adc50057c3b410b4802663fbc30d6c34e45ef589c6f4d",
+    "crop": [
+      434,
+      245,
+      1925,
+      998
+    ],
+    "redaction": [
+      1482,
+      725,
+      1937,
+      1037
+    ]
+  },
+  "images/nx12/six-axis-robot.png": {
+    "source_capture_sha256": "d36fc0512cd3d66d669b7185a5b037c3c5d3e907c5f5fb66aebdfff80391bd87",
+    "crop": [
+      434,
+      245,
+      1925,
+      998
+    ],
+    "redaction": [
+      1482,
+      725,
+      1937,
+      1037
+    ]
+  },
+  "images/nx12/fourbar.png": {
+    "source_capture_sha256": "b1613200992e2b229480c150b0bcb048a87d6057aec2a71ff9bf79d240d64534",
+    "crop": [
+      434,
+      245,
+      1925,
+      998
+    ],
+    "redaction": [
+      1482,
+      725,
+      1937,
+      1037
+    ]
+  },
+  "images/nx12/cam_groove.png": {
+    "source_capture_sha256": "afff4ba6a3fc1058cea5bc2ee8aac177f7f812d6e8875247984f2b8ae5064535",
+    "crop": [
+      434,
+      245,
+      1925,
+      998
+    ],
+    "redaction": [
+      1482,
+      725,
+      1937,
+      1037
+    ]
+  },
+  "images/nx12/planetary.png": {
+    "source_capture_sha256": "ecebd7e3ec5b5e086c6e32787b0e0bd3ea2020b7d08bbaa0aadebd73fa5a1cc8",
+    "crop": [
+      434,
+      245,
+      1925,
+      998
+    ],
+    "redaction": [
+      1482,
+      725,
+      1937,
+      1037
+    ]
+  },
+  "images/nx12/delta.png": {
+    "source_capture_sha256": "6ece930f74b866af8e1de8ba9bbc52de96d8ec276be2a1284275d6515596031b",
+    "crop": [
+      434,
+      245,
+      1925,
+      998
+    ],
+    "redaction": [
+      1482,
+      725,
+      1937,
+      1037
+    ]
+  },
+  "images/nx12/feeder.png": {
+    "source_capture_sha256": "523ba3f24d97cc1e89d30dd349888682ad6d20a04607a351ed955e2d4ec50c4a",
+    "crop": [
+      434,
+      245,
+      1925,
+      998
+    ],
+    "redaction": [
+      1482,
+      725,
+      1937,
+      1037
+    ]
+  },
+  "images/nx12/four-axis-robot.png": {
+    "source_capture_sha256": "1554b9588bcd4af0f260562db10a9dfdd782613aafcc5dd0f836c4109d39f39b",
+    "crop": [
+      548,
+      242,
+      1721,
+      846
+    ],
+    "redaction": [
+      1447,
+      634,
+      1727,
+      890
+    ]
+  },
+  "images/tabletop-stand/start.png": {
+    "source_capture_sha256": "edfd87ef42502e37f50322625b7d06e124ccee8b402ed3cff4c9c3d9803d7230",
+    "crop": null,
+    "redaction": null
+  },
+  "images/tabletop-stand/middle.png": {
+    "source_capture_sha256": "35eb41fb915d23433bc290b1b13c584e76f1622b62b82082ddc0e1bb9e437f8e",
+    "crop": null,
+    "redaction": null
+  },
+  "images/tabletop-stand/end.png": {
+    "source_capture_sha256": "2c2c4341708add2ebea325802b25a73cc7732ab2aac648bfdcc3e8784037e837",
+    "crop": null,
+    "redaction": null
+  },
+  "images/tabletop-stand/reopened.png": {
+    "source_capture_sha256": "35eb41fb915d23433bc290b1b13c584e76f1622b62b82082ddc0e1bb9e437f8e",
+    "crop": null,
+    "redaction": null
+  },
+  "models/acceptance/acceptance_plate_final.step": {
+    "source_sha256": "a789dd4f92ece7316e240eab658c747374656b6bc6e64439bf8969d009246ac4",
+    "operation": "byte-for-byte copy"
+  },
+  "models/acceptance/joint_arm.step": {
+    "source_sha256": "8f224970c3e5486427405abf2c37384d8559adedc2fa64996ab92d9f965f71ff",
+    "operation": "byte-for-byte copy"
+  },
+  "models/acceptance/joint_assembly.step": {
+    "source_sha256": "a00adbef21a4b94654cc0993eb4d1be50d4d732a9a89950d5c810e758a9dd8dd",
+    "operation": "byte-for-byte copy"
+  },
+  "models/acceptance/joint_base.step": {
+    "source_sha256": "1a9c6f2031f090055830645e9e150795e4bd2ef93915fb8c5ff9b0dd5abc0082",
+    "operation": "byte-for-byte copy"
+  },
+  "models/acceptance/joint_pin.step": {
+    "source_sha256": "d9af23eb077510a88654f1e3139cdf91c259b2053558495cc3afb359934d9c2e",
+    "operation": "byte-for-byte copy"
+  },
+  "models/acceptance/joint_shim.step": {
+    "source_sha256": "e515366e858842037990e822c82b3e21ba38d2b29625bd19d5a2df10f8d74995",
+    "operation": "byte-for-byte copy"
+  },
+  "images/r11-r9/home.png": {
+    "source_capture_sha256": "4e2429b10a530b17d28548623f64a49d686fab242f69631e8790801e36ff440e",
+    "native_capture_log_sha256": "affac008ef4ffd61b8832c239d4bb837fcf45b62502c4906af9f32bc5dcab4b8",
+    "operation": "NX viewport capture, pixel-identical RGB re-encode"
+  },
+  "images/r11-r9/mid.png": {
+    "source_capture_sha256": "bdf8a2f544d7b93b5ce5cea90ff86076ff1f29269436a0d9ec1efd0fa29ec795",
+    "native_capture_log_sha256": "affac008ef4ffd61b8832c239d4bb837fcf45b62502c4906af9f32bc5dcab4b8",
+    "operation": "NX viewport capture, pixel-identical RGB re-encode"
+  },
+  "images/r11-r9/pulled.png": {
+    "source_capture_sha256": "f7e569d5ad21f2f15469a41a21328280f6b67f7622dbfa4f238f79975a3d31e7",
+    "native_capture_log_sha256": "affac008ef4ffd61b8832c239d4bb837fcf45b62502c4906af9f32bc5dcab4b8",
+    "operation": "NX viewport capture, pixel-identical RGB re-encode"
+  }
+}

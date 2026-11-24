@@ -1,0 +1,97 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "NXAI finite ParamMap observation sidecar 1.0",
+  "type": "object",
+  "description": "Additive evidence sidecar; no native or global geometry release; legacy records remain immutable.",
+  "required": [
+    "schema_version",
+    "source_representation_id",
+    "target_representation_id",
+    "representation_identity_match",
+    "P05_numeric_coincidence_check",
+    "finite_param_map_status",
+    "finite_uv_residual",
+    "finite_xyz_residual",
+    "geometry_gate_observation",
+    "trim_membership_status",
+    "topology_incidence_status",
+    "candidate_enumeration_complete_for_supplied_uv_and_shifts",
+    "candidate_metadata",
+    "global_param_map_complete",
+    "global_3d_minimum_proven",
+    "global_proof_status",
+    "uniqueness",
+    "native_FinUseDomain",
+    "native_EdgeUseDomain",
+    "native_phase",
+    "geometry_release",
+    "legacy_status",
+    "evidence_refs",
+    "query_id",
+    "source_model_sha256",
+    "FINSP_payload_sha256",
+    "strict_same_source_not_established_note"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "NXAI.ParamMapObservation/1.0"
+    },
+    "source_representation_id": {},
+    "target_representation_id": {},
+    "representation_identity_match": {
+      "type": "object"
+    },
+    "P05_numeric_coincidence_check": {
+      "type": "object"
+    },
+    "finite_param_map_status": {
+      "enum": [
+        "FINITE_CORRESPONDENCE_OBSERVED_STRICT_RESIDUAL_MET",
+        "FINITE_CORRESPONDENCE_OBSERVED_STRICT_RESIDUAL_UNMET"
+      ]
+    },
+    "finite_uv_residual": {
+      "type": "object"
+    },
+    "finite_xyz_residual": {
+      "type": "object"
+    },
+    "geometry_gate_observation": {
+      "type": "object"
+    },
+    "trim_membership_status": {
+      "type": "object"
+    },
+    "topology_incidence_status": {
+      "type": "object"
+    },
+    "candidate_enumeration_complete_for_supplied_uv_and_shifts": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "candidate_metadata": {},
+    "global_param_map_complete": {
+      "const": false
+    },
+    "global_3d_minimum_proven": {
+      "const": false
+    },
+    "global_proof_status": {},
+    "uniqueness": {},
+    "native_FinUseDomain": {},
+    "native_EdgeUseDomain": {},
+    "native_phase": {},
+    "geometry_release": {
+      "const": false
+    },
+    "legacy_status": {},
+    "evidence_refs": {},
+    "query_id": {},
+    "source_model_sha256": {},
+    "FINSP_payload_sha256": {},
+    "strict_same_source_not_established_note": {}
+  },
+  "additionalProperties": true
+}

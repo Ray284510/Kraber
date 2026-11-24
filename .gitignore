@@ -1,0 +1,26 @@
+# Local execution and optional evidence
+.venv/
+__pycache__/
+*.py[cod]
+.env
+.env.*
+!.env.example
+*.pfx
+*.key
+*.pem
+*.lic
+*.sqlite*
+*.db
+*.dll
+*.exe
+*.zip
+*.bak
+*.prt.*
+src/nx-ai-lab/logs/
+src/nx-ai-lab/tmp/
+src/nx-ai-lab/models/
+src/nx-ai-lab/nx-user/
+src/nx-ai-lab/build/
+src/nx-ai-lab/work/**
+!src/nx-ai-lab/work/phase4/
+!src/nx-ai-lab/work/phase4/*.json

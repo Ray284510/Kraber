@@ -1,0 +1,9 @@
+import math,json
+from .calculations import fourbar_pose,fourbar_metrics,constraint_rank
+from .selection import interpret,select
+
+def design():
+    choice=select(interpret('设计一个输入连续旋转、输出周期摆动的紧凑装置'))
+    d,r,l,s=100.,25.,90.,70.;theta=30.;pose=fourbar_pose(d,r,l,s,math.radians(theta));A=pose['A'];C=pose['C']
+    joints=[{'name':'J0','type':'Revolute','first':'Crank','second':'Ground','origin':[0,0,18.2],'axis':[0,0,1]}, {'name':'J1','type':'Revolute','first':'Coupler','second':'Crank','origin':A+[24.6],'axis':[0,0,1]}, {'name':'J2','type':'Revolute','first':'Coupler','second':'Rocker','origin':C+[24.6],'axis':[0,0,1]}, {'name':'J3','type':'Revolute','first':'Rocker','second':'Ground','origin':[d,0,18.2],'axis':[0,0,1]}]
+    return {'schema_version':1,'family':'fourbar','selection':choice,'units':{'length':'mm','angle':'degree','time':'s'},'parameters':{'ground':d,'crank':r,'coupler':l,'rocker':s,'initial_input_deg':theta,'width':18,'thickness':6,'bore':6.4,'pin':6,'axial_gap':.4},'initial_points':{'O':[0,0],'A':A,'C':C,'D':[d,0]},'rigid_links':['Ground','Crank','Coupler','Rocker'],'joints':joints,'independent_calculation':fourbar_metrics(d,r,l,s),'rank_analysis':constraint_rank(['Ground','Crank','Coupler','Rocker'],joints),'drive':{'joint':'J0','velocity_deg_s':90,'duration_s':4,'steps':120},'output_markers':[{'name':'A','link':'Crank','point':A+[21.4]},{'name':'C','link':'Coupler','point':C+[27.8]}],'construction':'Raised grounded bearing pads leave underside clearance for moving pivot heads. Ground studs end flush below the coupler layer to avoid crossing interference. Native revolutes use actual cylindrical bores plus axial seats. Fasteners idealized by rigid bonds.','tolerances':{'marker_position_mm':.01,'angle_deg':.01,'dead_center_input_deg':.1,'quick_return_ratio':.005},'repair_limit':3}

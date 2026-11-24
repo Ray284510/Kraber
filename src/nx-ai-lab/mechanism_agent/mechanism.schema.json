@@ -1,0 +1,17 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "title":"NX12 mechanism plan and acceptance contract",
+  "type":"object",
+  "required":["schema_version","family","units","parameters","joints","drive","tolerances","repair_limit"],
+  "properties":{
+    "schema_version":{"const":1},
+    "family":{"type":"string"},
+    "selection":{"type":"object"},
+    "units":{"type":"object"},
+    "parameters":{"type":"object"},
+    "joints":{"type":"array","items":{"type":"object","required":["type","first","second","origin","axis"],"properties":{"type":{"enum":["Revolute","Slider","Spherical","Universal","Fixed","Cylindrical","PointOnCurve","CurveOnCurve","GearCoupler"]},"first":{"type":"string"},"second":{"type":"string"},"origin":{"type":"array","minItems":3,"maxItems":3},"axis":{"type":"array","minItems":3,"maxItems":3}}}},
+    "drive":{"type":"object"},
+    "tolerances":{"type":"object"},
+    "repair_limit":{"type":"integer","minimum":0,"maximum":3}
+  }
+}

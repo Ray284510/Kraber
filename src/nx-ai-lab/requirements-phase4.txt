@@ -1,0 +1,8 @@
+mcp==1.30.0
+numpy==2.5.4
+shapely==2.2.0
+jsonschema==4.26.0
+pywinauto==0.6.9
+imageio-ffmpeg==0.8.1
+Pillow==13.0.0
+pywin32==312

@@ -1,0 +1,19 @@
+{
+  "source_sha256": "01c754dbe86fabab4c99fe0fd2034782557b5c1cfafdc93a119320f31dc7f6d4",
+  "source_selection": [
+    "core_acceptance",
+    "archive_file_count",
+    "protected_models_checked",
+    "protected_models_changed",
+    "video"
+  ],
+  "core_acceptance": "12/12 passed within documented kinematic-demonstrator scope",
+  "archive_file_count": 321,
+  "protected_models_checked": 116,
+  "protected_models_changed": 0,
+  "video": {
+    "frames": 204,
+    "elapsed": 20.578000000008615,
+    "fps": 10
+  }
+}

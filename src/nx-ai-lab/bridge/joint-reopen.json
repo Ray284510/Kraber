@@ -1,0 +1,7 @@
+[
+  "nx_close_part 1",
+  "nx_open_part {NX_AI_LAB_ROOT}/models/joint/joint_assembly.prt",
+  "nx_inspect",
+  "nx_interference",
+  "nx_fit_view"
+]

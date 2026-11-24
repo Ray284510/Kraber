@@ -1,0 +1,26 @@
+"""One input driver, native pin-on-slot relation, independent harmonic check."""
+import asyncio,json,re,csv
+from pathlib import Path
+import numpy as np
+from phase4_common import Client,LOG
+
+async def main(family):
+    path=LOG/f'current-{family}.json';run=json.loads(path.read_text(encoding='utf-8'));m=Path(run['models']);out=Path(run['logs']);plan=run['plan'];r=plan['parameters']['crank_radius'];duration=plan['drive']['duration_s'];steps=plan['drive']['steps'];speed=plan['drive']['velocity_deg_s'];report={}
+    def save():(out/'motion-results.json').write_text(json.dumps(report,indent=2))
+    async with Client() as c:
+        assert run['build_passed'] and (await c.call('nx_status'))['part']==run['assembly'];await c.call('nx_motion_new '+str(m/'mechanism.sim'));await c.call('nx_motion_setup')
+        for name,parts in [('Link0',['GROUND','SHAFT']),('Crank',['CRANK','PIN']),('Yoke',['YOKE'])]:await c.call(f'nx_motion_link {name} {int(name=="Link0")} '+' '.join(parts))
+        for j in plan['joints']:await c.call(f'nx_motion_joint {j["name"]} {j["type"]} {j["first"]} {j["second"]} '+' '.join(map(str,j['origin']+j['axis'])))
+        report['slot']=await c.call(f'nx_motion_point_curve PinSlot Crank {r} 0 27 YOKE curve:SLOT_CENTER');report['higher_pairs']=await c.call('nx_motion_higher_pairs');report['unactuated']=await c.call(f'nx_motion_solution Free articulation {duration} {steps}')
+        await c.call(f'nx_motion_driver InputDrive Input revolute {speed}');await c.call(f'nx_motion_marker YPin Crank {r} 0 27');await c.call(f'nx_motion_marker YOutput Yoke {r} 0 27');report['driven']=await c.call(f'nx_motion_solution Cycle normal {duration} {steps}');report['precision']=await c.call('nx_motion_tighten Cycle 1e-9');report['integrator']=await c.tool('nx_motion_refine_integrator',{'solution':'Cycle','tolerance':1e-9,'maximum_step_s':.001});report['audit']=await c.call('nx_motion_audit');await c.call('nx_save_part');save();report['solve']=await c.call('nx_motion_solve Cycle',True);save();assert report['solve']['ok']
+        text=(m/'mechanism-cycle.minf').read_text(errors='replace');report['native_summary']=[l.strip() for l in text.splitlines() if any(k in l.lower() for k in ['degrees of freedom','number of drivers','redundan','constraint violation'])];save();dof=re.findall(r'^Number of Degrees of Freedom\s*=\s*(-?\d+)',text,re.M);assert dof and int(dof[-1])==0 and re.search(r'Number of Drivers\s*=\s*1',text)
+        await c.call('nx_application motion');await asyncio.sleep(1);await c.call('nx_view iso .75');await c.call('nx_motion_frame Cycle 0');report['markers']=await c.call('nx_motion_marker_results Y');save();data={a['marker']:np.array([v['values'] for v in a['coordinates']]).T for a in report['markers']['markers']};pin=data['YPin'];yoke=data['YOutput'];assert len(pin)==steps+1 and len(yoke)==steps+1
+        t=np.linspace(0,duration,steps+1);angle=np.radians(speed*t);expected=r*np.cos(angle);expected_pin=np.array([r*np.cos(angle),r*np.sin(angle),np.full_like(angle,27)]).T
+        checks={'native_stroke_mm':float(np.ptp(yoke[:,0])),'expected_stroke_mm':2*r,'output_position_error_mm':float(max(abs(yoke[:,0]-expected))),'pin_position_error_mm':float(max(np.linalg.norm(pin-expected_pin,axis=1))),'cross_axis_error_mm':float(max(abs(yoke[:,1:]-np.array([0,27])).ravel())),'slot_closure_error_mm':float(max(abs(pin[:,0]-yoke[:,0]))),'input_angle_error_deg':float(max(abs(np.degrees(np.unwrap(np.arctan2(pin[:,1],pin[:,0])))-speed*t))),'native_half_cycle_forward_s':float(t[np.argmin(yoke[:,0])]),'native_half_cycle_return_s':float(duration-t[np.argmin(yoke[:,0])])};checks['native_quick_return_ratio']=max(checks['native_half_cycle_forward_s'],checks['native_half_cycle_return_s'])/min(checks['native_half_cycle_forward_s'],checks['native_half_cycle_return_s']);report['cross_validation']={'checks':checks,'independent_planar_dof':1,'scope':'Analytical pin-slot closure compared with native output; one independent native driver and zero remaining solver DOF. Gruebler raw spatial count is retained, not overwritten.'};save();assert all(v<.02 for k,v in checks.items() if k.endswith('_error_mm') or k.endswith('_error_deg'));assert abs(checks['native_stroke_mm']-2*r)<.02 and abs(checks['native_quick_return_ratio']-1)<.005
+        with (out/'native-yoke-trajectory.csv').open('w',newline='') as f:
+            w=csv.writer(f);w.writerow(['time_s','input_deg','pin_x','pin_y','output_x','output_y','output_z']);w.writerows([t[k],speed*t[k],pin[k,0],pin[k,1],*yoke[k]] for k in range(steps+1))
+        report['collision_setup']=await c.call('nx_motion_collision_setup');report['frames']=[]
+        for frame in range(steps+1):
+            await c.call(f'nx_motion_frame Cycle {frame}');check=await c.call(f'nx_motion_collision_check {frame}');report['frames'].append(check);save()
+            if check['interference_count']:await c.call('nx_motion_frame Cycle finish');await c.call('nx_save_part');raise RuntimeError('Actual yoke interference; preserve before any bounded repair')
+        await c.call('nx_motion_frame Cycle finish');await c.call('nx_save_part');report['simulation_passed']=True;save();run.update(simulation=str(m/'mechanism.sim'),solution='Cycle',motion_passed=True);path.write_text(json.dumps(run,indent=2))
